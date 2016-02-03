@@ -10,7 +10,9 @@ var inputTypes = {
   radioOptionsInput    : require('./radioOptionsInput'),
   selectInput          : require('./selectInput'),
   textareaInput        : require('./textareaInput'),
-  textInput            : require('./textInput')
+  textInput            : require('./textInput'),
+  numberInput          : require('./numberInput'),
+  amountInput          : require('./amountInput')
 };
 
 /**
@@ -39,7 +41,7 @@ inputTypes.addInputType = (name, instance) => {
  * @param  object types InputTypes to add. string => Component
  */
 inputTypes.addInputTypes = (types) => {
-  if (typeof messages !== 'object') {
+  if (typeof types !== 'object') {
     throw new Error('Winterfell: First parameter of addInputTypes '
                     + 'must be of type object');
   }
